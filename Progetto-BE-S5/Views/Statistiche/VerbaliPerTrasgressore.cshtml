@@ -1,0 +1,49 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewBag.Title = "Totale Verbali per Trasgressore";
+}
+
+<h2>Totale Verbali per Trasgressore</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Trasgressore</th>
+            <th>Totale Verbali</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Trasgressore</td>
+                <td>@item.TotaleVerbali</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2>Statistiche</h2>
+
+<ul>
+    <li >
+        <a  asp-controller="Statistiche" asp-action="VerbaliPerTrasgressore">
+            Verbali per Trasgressore
+        </a>
+    </li>
+    <li>
+        <a asp-controller="Statistiche" asp-action="PuntiDecurtatiPerTrasgressore">
+            Punti Decurtati per Trasgressore
+        </a>
+    </li>
+    <li>
+        <a asp-controller="Statistiche" asp-action="ViolazioniOltre10Punti">
+            Violazioni oltre 10 Punti
+        </a>
+    </li>
+    <li>
+        <a asp-controller="Statistiche" asp-action="ViolazioniOltre400Euro">
+            Violazioni oltre 400 Euro
+        </a>
+    </li>
+</ul>

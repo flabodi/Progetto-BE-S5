@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Progetto_BE_S5.Models.Verbale>
+
+@{
+    ViewBag.Title = "Lista Verbali";
+}
+
+<h2>Elenco Verbali</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome Trasgressore</th>
+            <th>Tipo Violazione</th>
+            <th>Data Violazione</th>
+            <th>Importo</th>
+            <th>Decr. Punti</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var verbale in Model)
+        {
+            <tr>
+                <!-- Mostra nome e cognome del trasgressore -->
+                <td>@verbale.Anagrafica.Nome @verbale.Anagrafica.Cognome</td>
+                <!-- Mostra la descrizione della violazione -->
+                <td>@verbale.TipoViolazione.Descrizione</td>
+                <!-- Mostra la data della violazione -->
+                <td>@verbale.DataViolazione.ToString("dd/MM/yyyy")</td>
+                <!-- Mostra l'importo -->
+                <td>@verbale.Importo</td>
+                <!-- Mostra il decurtamento punti -->
+                <td>@verbale.DecurtamentoPunti</td>
+            </tr>
+        }
+    </tbody>
+</table>
