@@ -25,24 +25,20 @@
 </table>
 <h2>Statistiche</h2>
 
-<ul>
-    <li >
-        <a  asp-controller="Statistiche" asp-action="VerbaliPerTrasgressore">
-            Verbali per Trasgressore
-        </a>
-    </li>
-    <li>
-        <a asp-controller="Statistiche" asp-action="PuntiDecurtatiPerTrasgressore">
+<ul class="nav flex-column">
+    
+    <li class="nav-item  mb-2">
+        <a class=" btn btn-outline-warning" asp-controller="Statistiche" asp-action="PuntiDecurtatiPerTrasgressore">
             Punti Decurtati per Trasgressore
         </a>
     </li>
-    <li>
-        <a asp-controller="Statistiche" asp-action="ViolazioniOltre10Punti">
+    <li class="nav-item mb-2">
+        <a class=" btn btn-outline-warning" asp-controller="Statistiche" asp-action="ViolazioniOltre10Punti">
             Violazioni oltre 10 Punti
         </a>
     </li>
-    <li>
-        <a asp-controller="Statistiche" asp-action="ViolazioniOltre400Euro">
+    <li class="nav-item mb-2">
+        <a class=" btn btn-outline-warning" asp-controller="Statistiche" asp-action="ViolazioniOltre400Euro">
             Violazioni oltre 400 Euro
         </a>
     </li>

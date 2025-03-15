@@ -1,6 +1,27 @@
 
+body {
+    background-color: #212529f0;
+    color: white;
+}
 
-.txt {
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2A2A2A; 
+    color: white;
+    }
 
-    color: red !important;
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #333; 
+    color: #FFD700; 
+    }
+
+td  {
+    color:darkgray ;
+
 }
